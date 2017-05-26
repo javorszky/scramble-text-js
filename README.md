@@ -46,4 +46,4 @@ Because in 2006 I made a thing in Flash and wanted to recreate it in Javascript.
 
 ## Things to be aware of
 
-Best works with a monospaced font. Don't use on large bodies of text, or multiple paragraphs, unless you hate your batter / CPU.
+Best works with a monospaced font. Don't use on large bodies of text, or multiple paragraphs, unless you hate your battery / CPU.
