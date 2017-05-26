@@ -51,11 +51,3 @@ Best works with a monospaced font. Don't use on large bodies of text, or multipl
 ## DEMO
 
 <p class="scramble" style="font-family: Courier;">Hover over me to scramble and unscramble!</p>
-
-<script>
-	(function($,window,undefined) {
-		$(document).ready(function() {
-			$('.scramble').scramble({framePerReveal: 0.2});
-		});
-	}(jQuery,window));
-</script>
