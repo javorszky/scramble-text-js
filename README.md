@@ -1,5 +1,5 @@
 # scramble-text-js
-A library that scrambles a text and over some time gradually unscrambles it.
+A library that scrambles a text and over some time gradually unscrambles it. [Look at the demo!](https://javorszky.github.io/scramble-text-js/)
 
 ## Dependencies
 
