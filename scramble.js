@@ -3,30 +3,34 @@
 		var settings = $.extend({
 	            framePerReveal: 2
 	        }, options ),
-
 			seed = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@£$%^&*()":?><}{|~`/.,\\;][=-',
 			l = seed.length - 1,
-			text = this.text(),
-			textArray = text.split(''),
-			tl = text.length,
-			randomArray = [],
-			animating = false,
-			that = this,
+			animate = function(el, j) {
 
+				var output = [];
+				randomArrays[j] = getRandomStringArray(tls[j]);
+
+				for (var i = tls[j] - 1; i >= 0; i--) {
+					if (Math.floor(frames[j] / settings.framePerReveal ) > i) {
+						output[orders[j][i]] = textArrays[j][orders[j][i]];
+					} else {
+						output[orders[j][i]] = randomArrays[j][orders[j][i]];
+					}
+				}
+				el.text(output.join(''));
+			},
 			getRandomIntInclusive = function(min, max) {
 				min = Math.ceil(min);
 				max = Math.floor(max);
 				return Math.floor(Math.random() * (max - min + 1)) + min;
 			},
-
-			getRandomStringArray = function() {
+			getRandomStringArray = function(n) {
 				var a = [];
-				for (var i = tl - 1; i >= 0; i--) {
+				for (var i = n - 1; i >= 0; i--) {
 					a.push(seed[getRandomIntInclusive(0,l)]);
 				}
 				return a;
 			},
-
 			shuffle = function(array) {
 				let counter = array.length;
 
@@ -46,40 +50,44 @@
 
 			    return array;
 			},
+			texts = [],
+			textArrays = [],
+			tls = [],
+			randomArrays = [],
+			animating = [],
+			orders = [],
+			frames = [];
 
-			animate = function() {
-				var output = [];
-				randomArray = getRandomStringArray();
-				textArray
+		this.each(function(i, el) {
 
-				for (var i = tl - 1; i >= 0; i--) {
-					if (Math.floor(frame / settings.framePerReveal ) > i) {
-						output[order[i]] = textArray[order[i]];
+			var e = $(el),
+				animThis = function() {
+					animate(e, i);
+					frames[i]++;
+					if (frames[i] < tls[i] * settings.framePerReveal + 1) {
+				        requestAnimationFrame(animThis);
 					} else {
-						output[order[i]] = randomArray[order[i]];
+						animating[i] = false;
 					}
+				};
+
+			texts[i] = e.text(),
+			textArrays[i] = texts[i].split(''),
+			tls[i] = texts[i].length,
+			randomArrays[i] = [],
+			animating[i] = false,
+			orders[i] = shuffle( [...Array(tls[i]).keys()] );
+			frames[i] = 0;
+
+			e.on('mouseenter', function() {
+				if(animating[i]){
+					return;
 				}
+				frames[i] = 0;
+				animating[i] = true;
 
-				that.text(output.join(''));
-
-				frame++;
-				if (frame < tl * settings.framePerReveal + 1) {
-			        requestAnimationFrame(animate);
-				} else {
-					animating = false;
-				}
-			},
-			order = shuffle( [...Array(tl).keys()] );
-			frame = 0,
-
-		this.on('mouseenter', function() {
-			if(animating){
-				return;
-			}
-			frame = 0;
-			animating = true;
-
-			animate();
+				animThis();
+			});
 		});
 	}
 }(jQuery, window));
