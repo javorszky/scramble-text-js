@@ -1,3 +1,9 @@
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+<script src="https://raw.githubusercontent.com/javorszky/scramble-text-js/master/scramble.js"></script>
+
 # scramble-text-js
 A library that scrambles a text and over some time gradually unscrambles it.
 
@@ -47,3 +53,15 @@ Because in 2006 I made a thing in Flash and wanted to recreate it in Javascript.
 ## Things to be aware of
 
 Best works with a monospaced font. Don't use on large bodies of text, or multiple paragraphs, unless you hate your batter / CPU.
+
+## DEMO
+
+<p class="scramble" style="font-family: Courier;">Hover over me to scramble and unscramble!</p>
+
+<script>
+	(function($,window,undefined) {
+		$(document).ready(function() {
+			$('.scramble').scramble({framePerReveal: 0.2});
+		});
+	}(jQuery,window));
+</script>
