@@ -1,24 +1,24 @@
 ---
+layout: page
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Javascript text scrambler</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="assets/normalize.css">
+	<link rel="stylesheet" href="assets/cayman.css">
 	<script
+  type="application/javascript"
   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
   crossorigin="anonymous"></script>
-	<script src="https://raw.githubusercontent.com/javorszky/scramble-text-js/master/scramble.js"></script>
-	<script>
-		(function($,window,undefined) {
-			$(document).ready(function() {
-				$('.scramble').scramble({framePerReveal: 0.2});
-			});
-		}(jQuery,window));
-	</script>
+	<script type="application/javascript" src="scramble.js"></script>
+
 </head>
 <body>
-	{% include_relative README.md %}
+	{% capture readme_content %}{% include_relative README.md %}{% endcapture %}
+	{{ readme_content | markdownify }}
 </body>
 </html>
