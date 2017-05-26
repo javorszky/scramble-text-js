@@ -25,9 +25,10 @@ $('.scramble').scramble();
 $('.scramble').scramble({framePerReveal: 3});
 ```
 
-```
-framesPerReveal: how many frames it takes for the next character to be revealed / fixed. Takes a float. Lower the number, the quicker the unscramble.
-```
+| option name | What does it do? |
+|--------- | --------- |
+|`framesPerReveal`| how many frames it takes for the next character to be revealed / fixed. Takes a float. Lower the number, the quicker the unscramble.
+
 
 ### When does this happen?
 
