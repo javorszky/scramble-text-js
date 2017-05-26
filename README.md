@@ -1,9 +1,9 @@
 <script
-  type="text/javascript"
+  type="application/javascript"
   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
   crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://raw.githubusercontent.com/javorszky/scramble-text-js/master/scramble.js"></script>
+<script type="application/javascript" src="https://raw.githubusercontent.com/javorszky/scramble-text-js/master/scramble.js"></script>
 
 # scramble-text-js
 A library that scrambles a text and over some time gradually unscrambles it.
