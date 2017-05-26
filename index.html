@@ -1,0 +1,24 @@
+---
+layout: page
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="assets/normalize.css">
+	<link rel="stylesheet" href="assets/cayman.css">
+	<script
+  type="application/javascript"
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+	<script type="application/javascript" src="scramble.js"></script>
+
+</head>
+<body>
+	{% capture readme_content %}{% include_relative README.md %}{% endcapture %}
+	{{ readme_content | markdownify }}
+</body>
+</html>
