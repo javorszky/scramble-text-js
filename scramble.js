@@ -1,9 +1,10 @@
 (function($, window, undefined) {
 	$.fn.scramble = function(options) {
 		var settings = $.extend({
-	            framePerReveal: 2
+	            framePerReveal: 2,
+	            seed: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@£$%^&*()":?><}{|~`/.,\\;][=-'
 	        }, options ),
-			seed = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@£$%^&*()":?><}{|~`/.,\\;][=-',
+			seed = settings.seed,
 			l = seed.length - 1,
 			animate = function(el, j) {
 

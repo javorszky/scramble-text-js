@@ -34,13 +34,16 @@ $('.scramble').scramble();
 ### Options
 
 ```js
-$('.scramble').scramble({framePerReveal: 3});
+$('.scramble').scramble({
+	framePerReveal: 3,
+	seed: '____||'
+});
 ```
 
 | option name | What does it do? |
 |--------- | --------- |
-|`framesPerReveal`| how many frames it takes for the next character to be revealed / fixed. Takes a float. Lower the number, the quicker the unscramble.
-
+|`framesPerReveal`| how many frames it takes for the next character to be revealed / fixed. Takes a float. Lower the number, the quicker the unscramble.|
+| `seed` | This is a string that will be used to pick random characters from every frame until the original character is locked in. The random pick is aware of the length of the seed. If you pass in `____||` (4 underscores, 2 pipes), then underscores will be picked twice as often. <insert explainer on the pseudo random generator that is `Math.random`>.|
 
 ### When does this happen?
 
