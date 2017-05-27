@@ -10,7 +10,7 @@ layout: default
 <h3>Default seed</h3>
 
 <div class="language-js highlighter-rouge"><pre class="highlight"><code>
-$('.scramble-default').scramble({framePerReveal: 4});
+<span class="nx">$</span><span class="p">(</span><span class="s1">'.scramble-default'</span><span class="p">).</span><span class="nx">scramble</span><span class="p">({</span><span class="na">framePerReveal</span><span class="p">:</span> <span class="mi">4</span><span class="p">});</span>
 </code></pre></div>
 
 <p class="scramble-default" style="font-family: Courier;">This will be unscrambled using the default seed.</p>
@@ -19,18 +19,20 @@ $('.scramble-default').scramble({framePerReveal: 4});
 <h3>Underscored seed</h3>
 
 <div class="language-js highlighter-rouge"><pre class="highlight"><code>
-$('.scramble-une-pipe').scramble({framePerReveal: 4, seed: '____|'});
+<span class="nx">$</span><span class="p">(</span><span class="s1">'.scramble-default'</span><span class="p">).</span><span class="nx">scramble</span><span class="p">({</span><span class="na">framePerReveal</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span><span class="na">seed</span><span class="p">:</span> <span class="s1">'____||'</span><span class="p">});</span>
 </code></pre></div>
+
+<span class="nx">$</span><span class="p">(</span><span class="s1">'.scramble'</span><span class="p">).</span><span class="nx">scramble</span><span class="p">({</span>
+	<span class="na">framePerReveal</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+	<span class="na">seed</span><span class="p">:</span> <span class="s1">'____||'</span>
+<span class="p">});</span>
 
 <p class="scramble-une-pipe" style="font-family: Courier;">Unscrambling this will be done with only a bunch of underscores and a pipe.</p>
 
 <h3>Seed in non-latin characters</h3>
 
 <div class="language-js highlighter-rouge"><pre class="highlight"><code>
-$('.scramble-kana').scramble({
-	framePerReveal: 4,
-	seed: 'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわを'});
-});
+<span class="nx">$</span><span class="p">(</span><span class="s1">'.scramble-default'</span><span class="p">).</span><span class="nx">scramble</span><span class="p">({</span><span class="na">framePerReveal</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span><span class="na">seed</span><span class="p">:</span> <span class="s1">'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわを'</span><span class="p">});</span>
 </code></pre></div>
 
 <p class="scramble-kana">And lastly special consideration needs to be given to using non-latin characters when unscrambling, such as hiragana ones.</p>
