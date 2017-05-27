@@ -1,14 +1,29 @@
 ---
 layout: default
 ---
-
-<h2>DEMO</h2>
-
-<p class="scramble" style="font-family: Courier;">Hover over me to scramble and unscramble! It can do pretty long texts as well ^_^.</p>
-<p class="scramble" style="font-family: Courier;">This is a second paragraph that has the library attached to it.</p>
+<a href="#demo">Jump to the demos</a>
 
 {{ content }}
 
-<h2>DEMO AGAIN!</h2>
+<h2 id="demo">DEMO</h2>
 
-<p class="scramble" style="font-family: Courier;">Ooooh, a third one!</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code>
+$('.scramble-default').scramble({framePerReveal: 4});
+</code></pre></div>
+<p class="scramble-default" style="font-family: Courier;">This will be unscrambled using the default seed.</p>
+<p class="scramble-default">Beware non-monospaced fonts, because this is what it looks like on "Open Sans".</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code>
+$('.scramble-une-pipe').scramble({framePerReveal: 4, seed: '____|'});
+
+</code></pre></div>
+<p class="scramble-une-pipe" style="font-family: Courier;">Unscrambling this will be done with only a bunch of underscores and a pipe.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code>
+$('.scramble-kana').scramble({
+	framePerReveal: 4,
+	seed: 'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわを'});
+});
+</code></pre></div>
+<p class="scramble-kana">And lastly special consideration needs to be given to using non-latin characters when unscrambling, such as hiragana ones.</p>
+

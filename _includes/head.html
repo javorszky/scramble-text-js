@@ -11,7 +11,11 @@
   <script>
     (function($,window,undefined) {
       $(document).ready(function() {
-        $('.scramble').scramble({framePerReveal: 4});
+        $('.scramble-default').scramble({framePerReveal: 4});
+        $('.scramble-une-pipe').scramble({framePerReveal: 4, seed: '____|'});
+        $('.scramble-kana').scramble({
+          framePerReveal: 4,
+          seed: 'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわを'});
       });
     }(jQuery,window));
   </script>
