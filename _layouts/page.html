@@ -7,18 +7,22 @@ layout: default
 
 <h2 id="demo">DEMO</h2>
 
+<h3>Default seed</h3>
 <div class="language-js highlighter-rouge"><pre class="highlight"><code>
 $('.scramble-default').scramble({framePerReveal: 4});
 </code></pre></div>
+<hr>
 <p class="scramble-default" style="font-family: Courier;">This will be unscrambled using the default seed.</p>
 <p class="scramble-default">Beware non-monospaced fonts, because this is what it looks like on "Open Sans".</p>
 
+<h3>Underscored seed</h3>
 <div class="language-js highlighter-rouge"><pre class="highlight"><code>
 $('.scramble-une-pipe').scramble({framePerReveal: 4, seed: '____|'});
 
 </code></pre></div>
 <p class="scramble-une-pipe" style="font-family: Courier;">Unscrambling this will be done with only a bunch of underscores and a pipe.</p>
 
+<h3>Seed in non-latin characters</h3>
 <div class="language-js highlighter-rouge"><pre class="highlight"><code>
 $('.scramble-kana').scramble({
 	framePerReveal: 4,
