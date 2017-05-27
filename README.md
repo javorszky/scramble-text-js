@@ -9,7 +9,19 @@ A library that scrambles a text and over some time gradually unscrambles it. [Lo
 ## How to use
 
 ### Quickstart
-Given the following markup:
+
+First download the `.zip`, or clone the repository, or get the `scramble.js` from the repo, so you have the file. Then include the `scramble.js` into your website after you included jquery.
+
+```
+<head>
+	...
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+	<script src="scramble.js"></script>
+	...
+</head>
+```
+
+Then given the following markup:
 
 ```html
 <p class="scramble">Scramble mi timbers!</p>
